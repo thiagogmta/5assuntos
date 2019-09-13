@@ -1,0 +1,52 @@
+/* ESTILOS GERAIS */
+
+/*Estilos para o Corpo da Página - Define estilo da fonte*/
+body{
+	font-family: Helvetica, Arial;
+}
+/*Estilos para parágrafos - Definição de fontes*/
+h1, h2, h3{
+	font-family: "Permanent Marker", Helvetica, Arial;
+}
+
+h2{
+	color:#596358;
+}
+/*ESTILOS ESTRUTURAIS*/
+
+/*Definindo estilo para o cabeçalho*/
+header{
+	background-color: #008DA9; /*Cor de fundo*/
+	display: flex; /*Define que o container será flexivel*/
+	flex-direction: column; /*Define o comportamento do container*/
+	align-items: center; /*Alinha os intens do container ao centro*/
+	padding: 20px; /*Espaçamento interno de 20px para todos os lados*/
+}
+/*Definindo estilos para todos os parágrafos dentro do cabeçalho*/
+header p{ 
+	max-width: 1000px; /*Define largura máxima do parágrafo*/
+	text-align: justify; /*Justifica o texto*/
+}
+section{
+	background-color: #EEEEEE;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+footer{
+	background-color: #596358;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	color: #ffffff;
+}
+
+/*Estilos para Tabelas*/
+th{background-color: #008DA9;}
+td, th {
+	border: 1px solid #008DA9;
+	text-align: left;
+	padding: 8px;
+}
