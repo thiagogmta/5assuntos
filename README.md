@@ -13,29 +13,29 @@ Alguns links que podem ser úteis para seu projeto web.
 
 ### Palettable
 
-![Palettable](01.png)
-
 O palettable é um site que fornece paletas de cores harmônicas para seu projeto. Existem diversos sites do tipo disponíveis na web. O palettable é meu favorito.
 
 Link: [Palettable](https://www.palettable.io)
 
-## Fonts Google
+![Palettable](01.png)
 
-![Fonts Google](02.png)
+## Fonts Google
 
 O Fonts Google possibilita que você insira fontes externas em eu projeto. Basta selecionar as fontes desejadas e copiar o link de integração com seu projeto.
 
 Link: [Fonts Goolge](https://fonts.google.com)
 
-## Normalize
+![Fonts Google](02.png)
 
-![Fonts Google](03.png)
+## Normalize
 
 > Faça os Navegadores renderizarem seu projeto de forma mais consistente.
 
 O objetivo do normalize é padronizar a renderização do seu site para diferentes navegadores.
 
 Link: [Normalize](https://necolas.github.io/normalize.css/)
+
+![Fonts Google](03.png)
 
 ## CSS - Introdução
 
