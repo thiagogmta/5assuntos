@@ -7,6 +7,8 @@ Objetivos do projeto:
 * Links Importantes
 * Fazendo uma estilização básica em nosso projeto
 
+![Projeto](00.gif)
+
 ## Links Importantes
 
 Alguns links que podem ser úteis para seu projeto web.
