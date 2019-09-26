@@ -77,7 +77,9 @@ No CSS interno utilizamos o elemento `<style> CSS Aqui! </style>` do html para i
 	<h1>Uma imagem vale mais que mil palavras </h1>
 
 	<p>
-		<cite>Uma imagem vale mais que mil palavras</cite> é uma expressão popular de autoria do filósofo chinês Confúcio, utilizada para transmitir a ideia do poder da comunicação através das imagens.
+        <cite>Uma imagem vale mais que mil palavras</cite> 
+        é uma expressão popular de autoria do filósofo chinês Confúcio, 
+        utilizada para transmitir a ideia do poder da comunicação através das imagens.
 	</p>
 
 </body>
