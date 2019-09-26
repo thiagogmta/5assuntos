@@ -53,7 +53,7 @@ Uma das formas de se utilizar o CSS é inserindo-o diretamente no html através 
 </p>
 ````
 
-> **Nota: ** Utiliza-se CSS em linha em casos muito específicos. No geral recomenda-se a inserção de CSS em seu arquivo das duas maneiras a seguir.
+> **Nota:** Utiliza-se CSS em linha em casos muito específicos. No geral recomenda-se a inserção de CSS em seu arquivo das duas maneiras a seguir.
 
 ### CSS Interno
 
@@ -102,19 +102,90 @@ No CSS interno utilizamos o elemento `<style> CSS Aqui! </style>` do html para i
 
 ### Elementos, Classes e ID
 
-#### Elementos Filhos diretos e Indiretos
+Em seu arquivo css é possível realizar a estilização de elementos CSS diretamente, de Classes ou de Identificadores (ID). Vejamos
 
-## Contributing
+**Elementos**
 
-1. Faça o _fork_ do projeto (<https://github.com/yourname/yourproject/fork>)
-2. Crie uma _branch_ para sua modificação (`git checkout -b feature/fooBar`)
-3. Faça o _commit_ (`git commit -am 'Add some fooBar'`)
-4. _Push_ (`git push origin feature/fooBar`)
-5. Crie um novo _Pull Request_
+Para estilizar o conteúdo de um elemento html basta fazer referência a esse elemento dentro do arquivo CSS. Exemplo:
 
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/seunome/seuprojeto/wiki
+````css
+body{
+	font-family: Helvetica, Arial;
+    color: #000000;
+}
+````
+> Nesse caso estamos definindo o estilo da fonte do corpo da pagina e a cor de todo o texto.
+
+**Classes**
+
+Classes são blocos de instrução CSS que podem ser "chamadas" em qualquer elemento HTML. Normalmente uma classe CSS é criado com o intuito de ser utilizada repetidas vezes no código. Para criar uma classe basta dar um nome a ela precedido de ponto `.nomeDaClasse` Exemplo:
+
+````css
+.erro{
+	font-weight: bold;
+    color: red;
+}
+````
+> Essa classe irá estilizar o texto deixando-o em negrito com a cor vermelha.
+
+Para inserir a classe no elemento HTML basta utilizar o atributo `class`. Exemplo:
+
+````html
+<div class="erro">
+    Ouve um erro no processo!
+</div>
+````
+
+**ID**
+
+Seletores funcionam da mesma maneira da Classe entretanto são referenciados pelo ID do elemento. Normalmente utiliza-se esse tipo de seletor para estilizar apenas um elemento específico, enquanto as Classes tem como premissa a reutilização em diversos elementos. Exemplo:
+
+````css
+#produto{
+    background-color: #B8B8B8;
+    color:#271F2A;
+}
+````
+
+#### Elementos Filhos Indiretos e Diretos
+
+Podemos criar blocos de estilo no CSS que tratem de elementos e seus elementos filhos (elementos dentro de outros elementos). Segue uma pequena descrição para cada caso.
+
+**Elementos Filhos Indiretos**
+
+Para esses casos pode-se criar blocos de formatação para o elemento pai e elementos que estejam dentro dele. Exemplo:
+
+````css
+header p{ 
+	text-align: justify;
+}
+````
+> Nesse exemplo estamos dizendo que: queremos que o texto de todos os parágrafos que estiverem dentro do elemento `<header>` apresentem-se justificados.
+
+**Elementos Filhos Diretos**
+
+No caso de elementos filhos diretos podemos criar uma restrição com o caractere `>` para essa utilização. Exemplo:
+
+````css
+header > p{ 
+	text-align: justify;
+}
+````
+> A alteração foi sutil. Mas nesse caso estamos criando uma formatação que será aplicada em parágrafos que estejam diretamente dentro do `<header>`. Parágrafos que estejam dentro de outros elementos (mesmo que dentro do `<header>`) não irão sofrer essa formatação. Exemplo:
+
+````html
+<header>
+    <p> Esse paragrafo será apresentado de forma justificada </p>
+
+    <div>
+        <p> Esse paragrafo não será apresentado de forma justificada </p>
+    </div>
+</header>
+````
+
+## Acesse o projeto
+
+Para acessar o projeto utilize os seguintes links:
+
+GitHub: [GitHub](https://github.com/thiagogmta/5assuntos)
+GitHubPages: [GitHubPages](https://thiagogmta.github.io/5assuntos/)
