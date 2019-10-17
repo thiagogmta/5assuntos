@@ -1,0 +1,232 @@
+<html>
+    <head>
+        <title>Media Query</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+        <style>
+            
+            /***ESTILOS GERAIS***/
+            body{
+                font-family: Helvetica, Arial;
+                text-align: justify;
+                color: #271F2A;
+                margin: 0;
+                padding: 0;
+            }
+            h1, h2, h3{
+                font-family: 'Mansalva', cursive;
+                color:#521861;
+                margin: 0;
+                padding-top: 10px;
+                
+            }
+            .link{
+                text-decoration: none;
+                color: #521861;
+                font-weight: bold;
+            }
+            .link:hover{
+                text-decoration: underline;
+            }
+            code{
+                background-color: #d3d3d3;
+                padding:5px;
+                display: inline-block;
+            }
+            
+            /***ESTILOS ESTRUTURAIS***/
+            header{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: #B0AFAD;       
+                height: 30%;
+            }
+            .box_0{
+                display: flex;
+                flex-direction: column;
+                
+            }
+            .box_1{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                
+            }
+            .box_itens{
+                width: 440px;
+                
+            }
+            footer{
+                text-align: center;
+                background-color: #271F2A;
+                color: #B0AFAD;
+            }
+            footer a{
+                text-decoration: none;
+            }
+            
+            /***ESTILOS PARA MENU***/
+            nav{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #19282B;
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                width: 900px;
+                color: #f1f1f1;
+
+            }
+
+            nav ul li{
+                display: flex;
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+            }
+
+            nav ul li a{
+                width: 100%;
+                text-decoration: none;
+                color: #f1f1f1;
+            }
+
+            nav ul li a:hover{
+                background-color: #521861;
+                color: #ffffff;
+            }
+            main{
+                max-width: 900px;
+                margin: 0 auto;
+            }
+            
+            /***MEDIA QUERY***/
+            @media (max-width: 750px){
+                .box_itens{
+                    width: 100%;
+                }
+
+                nav{
+                    flex-direction: column;
+                }
+                nav ul{
+                    flex-direction: column;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="topo">
+            <h1>Media Queries</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#oque">O que são Media Queries</a></li>
+                <li><a href="#exemplo">Exemplo</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section class="box_0">
+                <h2 id="oque">O que são Media Queries</h2>
+                <p>
+                    Media queries são instruções inseridas dentro do CSS que ao serem atendidas podem desencadear ações preestabelecias. As medias queries possibilitam uma gama de atividades e configurações dinâmicas do seu layout. Basicamente inserimos uma instrução condicional que, ao ser atendida, executa um bloco de instruções.
+                </p>
+                <p>
+                    O exemplo mais direto que podemos abordar é na criação de layouts responsivos. Podemos criar um layout que ao ser redimencionado para "x" largura recebe um estilo projetado para aquela resolução em específico.
+                </p>
+                <a href="#topo" class="link">Voltar ao topo!</a>
+            </section>
+            <section class="box_1">
+                
+                <div class="box_itens">
+                    <h2>Quando devo utilizar?</h2>
+                    <p>
+                        Quando existir a necessidade da renderização de seu projeto em contextos diferentes.
+                     </p>   
+                    <a href="#topo" class="link">Voltar ao topo!</a>
+                </div>
+                
+                <div class="box_itens">
+                    <h2>CSS @media Rule</h2>
+                    <p>
+                        Para acessar o guia de regras de utilização exemplos e mais consulte o site <a href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp" alt="W3School sessão de media query">w3schools</a>. Nesse link você vai encontrar:
+                     </p>   
+                        <ul>
+                            <li>Definição da sintaxe</li>
+                            <li>Tipos de @media</li>
+                            <li>Seletores de condição</li>
+                            <li>Exemplos e mais</li>
+                        </ul>
+                        <a href="#topo" class="link">Voltar ao topo!</a>
+                </div>
+                
+                <div class="box_itens">
+                    <h2 id="exemplo">Um pequeno exemplo</h2>
+
+                    <p>
+                        <img src="img/exemplo.PNG" alt="Exemplo media query">
+                    </p>
+                    <p>
+                        Esse pequeno trecho de código que quando a resolução da janela estiver inferior ou igual a 600px essa instrução CSS será interpretada.
+                    </p>
+                    <p>
+                        O @media define o início da instrução. A informação em parêntese representa a instrução condicional que caso atendida executa o bloco de código.
+                    </p>
+                    <a href="#topo" class="link">Voltar ao topo!</a>
+                </div>
+                
+
+            
+                <div class="box_itens">
+                    <h2>Operadores</h2>
+                    <p>
+                        É possível compor as media queries utilizando operadores lógicos para criação de instruções mais complexas. Pode-se utilizar os operadores "not", "and" e "only".
+                    </p>
+                    <h3>Not</h3>
+                    <p>
+                        A instrução <code>not</code> processar uma query caso sua instrução condicional não seja atendida. Pegando o mesmo exemplo anterior. Temos uma condição para quando a página fique em uma resolução inferior a 600px. Caso queira efetuar o contrário, podemos escrever a query da seguinte maneira
+                    </p>
+                    <p>
+                        <code>@media not all and (max-width: 600px){ ... Instruções ... }</code>
+                    </p>
+                    <h3>And</h3>
+                    <p>
+                        O operador "and" combina várias condições em uma mesma media query. Onde todas as condições devem ser atendidas para que a query surta efeito. Por exemplo:
+                    </p>
+                    <p>
+                        <code>@media (max-width: 600px) and (max-height: 200px){ ... Instruções ... }</code>
+                    </p>
+                    
+                    <h3>Only</h3>
+                    <p>
+                        Pode-se utilizar a instrução <code>only</code> para evitar que navegadores antigos que não possuem suporte a midia query tente renderizar suas instruções. Ao utilizar esse operador sua expressão ficaria da seguinte maneira:
+                    </p>
+                    <p>
+                        <code>@media only screen and (max-width: 600px){ ... Instruções ... }</code>
+                    </p>
+                    <a href="#topo" class="link">Voltar ao topo!</a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <h2 id="about">About</h2>
+            
+                <p>Thiago Guimarães Tavares</p>
+                <address>
+                    <p>E-mail: <a href="mailto:thiagogmta@gmail.com">thiagogmta@gmail.com</a></p>
+                </address>
+            
+        </footer>
+    </body>
+</html>
